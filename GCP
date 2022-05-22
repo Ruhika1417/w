@@ -1,0 +1,44 @@
+Step 4 : Click Dashboard in the Google Cloud Plaform
+Step 5 : Dashboard in the Google Cloud Plaform
+Step 6: Click New Project and give unique Project Name
+Step 7 : Google App Engine is initated
+Step 8 : Click create Application
+Step 9 : Create app and Select Language Python
+Step 10 : Python app Engine application is created
+Step 12 : Click Cloud Shell in the Kathir-Cloud-Project
+Step 13 : Create a Directory PythonProject using mkdir command
+Syntax : mkdir PythonProject
+Step 14 : Click Editor to create Python application
+Step 15 : Click New File in the PythonProject Folder (Python file)
+Step 16 : Create main.py file
+main.py file
+
+import logging
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello():
+ return 'Hello World'
+if __name__ == ' main ':
+ app.run(host='127.0.0.1',port=8080, debug=True)
+ 
+ 
+ Step 17 : Create app.yaml file
+ 
+app.yaml
+
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+runtime_config:
+ python_version: 3
+ 
+Step 18 : Create requirements.txt file
+requirements.txt
+Flask==0.11.1 
+gunicorn==19.6.0
+Step 19 : Move to Cloud Shell Environment to run the application
+Step 20 : Move to Cloud Shell Environment to run the application 
+Syntax : gcloud app deploy
+Continue the application. It enable service on the given project
+It started building the object and fetc
